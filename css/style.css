@@ -1,0 +1,226 @@
+/* ============================================================
+   Friends of Bishop's Park — storybook theme
+   Standalone static-site stylesheet (converted from the
+   WordPress "Additional CSS" version — the WP/Twenty-Twenty
+   theme override hacks have been removed since this is no
+   longer running inside WordPress).
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600;6..96,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
+:root{
+  --cream:#EAE9D2;          /* page background, from banner */
+  --cream-2:#F2F1DF;        /* lighter panels */
+  --cream-3:#E1E0C4;        /* deeper bands */
+  --paper:#F7F6EC;          /* card surface */
+  --brick:#9E4A33;          /* display red-brown, from banner text */
+  --brick-deep:#7E3826;
+  --ranger:#43512F;         /* ranger uniform green */
+  --ranger-deep:#313D22;
+  --sage:#7E8A5C;           /* soft foliage */
+  --tan:#C39A5E;            /* gold accents */
+  --ink:#34301F;            /* body text */
+  --ink-soft:#5C5640;
+  --rule:rgba(67,81,47,.22);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;padding:0}
+.fobp-site, .fobp-site *{box-sizing:border-box;margin:0;padding:0}
+.fobp-site{
+  background:var(--cream);
+  color:var(--ink);
+  font-family:'Lora',Georgia,serif;
+  font-size:17px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+.fobp-site img{max-width:100%;display:block}
+.fobp-site a{color:var(--brick);text-decoration-thickness:1px;text-underline-offset:3px}
+.fobp-site a:hover{color:var(--brick-deep)}
+.fobp-site .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* ---------- typography ---------- */
+.fobp-site .eyebrow{font-family:'Lora',serif;font-weight:700;font-size:.95em;letter-spacing:.14em;text-transform:uppercase;color:var(--ranger);display:block}
+.fobp-site .display{
+  font-family:'Bodoni Moda',serif;color:var(--brick);font-weight:500;
+  text-transform:uppercase;letter-spacing:.05em;line-height:1.04;
+}
+.fobp-site h1.display{font-size:clamp(2.4em,5.6vw,4.2em)}
+.fobp-site h2.display{font-size:clamp(1.8em,3.6vw,2.7em)}
+.fobp-site h3.display{font-size:clamp(1.3em,2.3vw,1.7em)}
+.fobp-site .prose h2{font-family:'Bodoni Moda',serif;color:var(--brick);font-weight:500;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(1.5em,3vw,2.1em);margin:34px 0 14px;line-height:1.12}
+.fobp-site .prose h3{font-family:'Bodoni Moda',serif;color:var(--ranger-deep);font-weight:600;font-size:1.3em;letter-spacing:.02em;margin:26px 0 10px}
+.fobp-site .prose h4, .fobp-site .prose h5{font-family:'Lora',serif;font-weight:700;color:var(--ranger-deep);font-size:1.05em;letter-spacing:.04em;margin:20px 0 8px;text-transform:uppercase}
+.fobp-site .prose p{margin:0 0 16px}
+.fobp-site .prose ul{margin:0 0 18px;padding-left:0;list-style:none}
+.fobp-site .prose ul li{position:relative;padding-left:28px;margin-bottom:10px}
+.fobp-site .prose ul li::before{content:"";position:absolute;left:6px;top:.7em;width:9px;height:9px;border-radius:50%;background:var(--tan);box-shadow:0 0 0 3px rgba(195,154,94,.25)}
+.fobp-site .lead{font-size:1.12em;color:var(--ink-soft)}
+
+/* ---------- buttons ---------- */
+.fobp-site .btn{
+  display:inline-block;text-decoration:none;font-family:'Lora',serif;font-weight:700;
+  font-size:.78em;letter-spacing:.16em;text-transform:uppercase;
+  padding:13px 28px;border-radius:999px;transition:transform .15s,background .15s,color .15s,box-shadow .15s;
+  border:1.5px solid transparent;cursor:pointer;
+}
+.fobp-site .btn:hover{transform:translateY(-2px)}
+.fobp-site .btn-primary{background:var(--brick);color:#F7F2E6;border-color:var(--brick-deep);box-shadow:0 8px 18px -10px rgba(126,56,38,.8)}
+.fobp-site .btn-primary:hover{background:var(--brick-deep);color:#fff}
+.fobp-site .btn-green{background:var(--ranger);color:#F1F1DD;border-color:var(--ranger-deep)}
+.fobp-site .btn-green:hover{background:var(--ranger-deep);color:#fff}
+.fobp-site .btn-ghost{background:transparent;color:var(--ranger);border-color:var(--ranger)}
+.fobp-site .btn-ghost:hover{background:var(--ranger);color:#F1F1DD}
+.fobp-site .btn-light{background:var(--cream-2);color:var(--ranger-deep);border-color:var(--cream-3)}
+.fobp-site .btn-light:hover{background:#fff}
+
+/* ---------- nav ---------- */
+.fobp-site .nav{position:sticky;top:0;z-index:100;background:rgba(234,233,210,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.fobp-site .nav-inner{max-width:1180px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.fobp-site .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.fobp-site .brand .mark{width:42px;height:42px;border-radius:50%;background:var(--ranger);display:flex;align-items:center;justify-content:center;flex:0 0 auto;box-shadow:inset 0 0 0 2px rgba(255,255,255,.18)}
+.fobp-site .brand .mark svg{width:24px;height:24px}
+.fobp-site .brand b{font-family:'Bodoni Moda',serif;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--brick);font-size:1em;line-height:1.1}
+.fobp-site .brand small{display:block;font-size:.58em;letter-spacing:.24em;text-transform:uppercase;color:var(--sage);font-weight:600}
+.fobp-site .menu{display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:flex-end}
+.fobp-site .menu a{font-size:.72em;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:var(--ink);text-decoration:none;white-space:nowrap}
+.fobp-site .menu a:hover, .fobp-site .menu a.active{color:var(--brick)}
+.fobp-site .menu .btn{padding:9px 18px;font-size:.68em}
+.fobp-site .nav-toggle{display:none}
+
+/* ---------- masthead (full-width banner image) ---------- */
+.fobp-site .masthead{background:var(--cream)}
+.fobp-site .masthead img{width:100%;height:auto;display:block}
+
+/* ---------- page header band ---------- */
+.fobp-site .pagehead{padding:60px 24px;text-align:center;border-bottom:1px solid var(--rule);background:
+   radial-gradient(120% 140% at 50% -20%, var(--cream-2), var(--cream) 60%)}
+.fobp-site .pagehead .eyebrow{margin-bottom:10px}
+.fobp-site .pagehead p{max-width:680px;margin:14px auto 0;color:var(--ink-soft);font-size:1.08em}
+
+/* ---------- sections ---------- */
+.fobp-site .section{padding:64px 24px}
+.fobp-site .section-tint{background:var(--cream-3);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.fobp-site .section-paper{background:var(--cream-2)}
+.fobp-site .center{text-align:center}
+.fobp-site .sec-head{max-width:720px;margin:0 auto 40px;text-align:center}
+.fobp-site .sec-head p{color:var(--ink-soft);margin-top:12px}
+
+/* leafy divider */
+.fobp-site .leaf{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--sage);margin:0 auto}
+.fobp-site .leaf::before, .fobp-site .leaf::after{content:"";height:1px;width:80px;background:var(--rule)}
+.fobp-site .leaf svg{width:26px;height:26px}
+
+/* ---------- cards ---------- */
+.fobp-site .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.fobp-site .cards.two{grid-template-columns:repeat(2,1fr)}
+.fobp-site .card{
+  background:var(--paper);border:1px solid var(--rule);border-radius:18px;
+  padding:30px 30px 32px;box-shadow:0 18px 36px -28px rgba(49,61,34,.7);
+  display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s;
+}
+.fobp-site .card.link{text-decoration:none;color:var(--ink)}
+.fobp-site .card.link:hover{transform:translateY(-4px);box-shadow:0 26px 44px -28px rgba(49,61,34,.75)}
+.fobp-site .card h3{font-family:'Bodoni Moda',serif;color:var(--ranger-deep);font-size:1.4em;font-weight:600;letter-spacing:.02em;margin:6px 0 10px}
+.fobp-site .card p{font-size:.97em;color:var(--ink-soft);margin-bottom:12px}
+.fobp-site .card .when{font-weight:700;color:var(--brick);font-size:.92em;margin-bottom:10px}
+.fobp-site .card .more{margin-top:auto;font-weight:700;font-size:.76em;letter-spacing:.14em;text-transform:uppercase;color:var(--brick)}
+.fobp-site .card .thumb{margin:-30px -30px 18px;border-radius:18px 18px 0 0;overflow:hidden;background:var(--ranger-deep)}
+.fobp-site .card .thumb img{width:100%;aspect-ratio:3/2;object-fit:cover}
+
+/* ---------- feature split ---------- */
+.fobp-site .feature{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;max-width:1080px;margin:0 auto}
+.fobp-site .feature.flip .ph{order:2}
+.fobp-site .ph{border-radius:20px;overflow:hidden;box-shadow:0 22px 44px -26px rgba(49,61,34,.8);border:1px solid var(--rule);background:var(--ranger-deep)}
+.fobp-site .ph img{width:100%;height:100%;object-fit:cover}
+.fobp-site .ph.tall img{aspect-ratio:4/5}
+.fobp-site .ph.wide img{aspect-ratio:3/2}
+
+/* circular character vignette */
+.fobp-site .character{width:100%;max-width:360px;margin:0 auto;aspect-ratio:1/1;border-radius:50%;
+  background:radial-gradient(circle at 50% 40%, var(--cream-2), var(--cream-3));
+  border:1px solid var(--rule);overflow:hidden;display:flex;align-items:flex-end;justify-content:center;
+  box-shadow:0 20px 40px -26px rgba(49,61,34,.8)}
+.fobp-site .character img{width:92%;height:auto;object-fit:contain;filter:drop-shadow(0 10px 14px rgba(0,0,0,.25))}
+
+/* ---------- "needs you" membership band (uses masthead image) ---------- */
+.fobp-site .needsyou{background:var(--cream-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.fobp-site .needsyou img{width:100%;height:auto;display:block}
+.fobp-site .needsyou .cta{text-align:center;padding:30px 24px 8px}
+
+/* ---------- green band ---------- */
+.fobp-site .band{background:var(--ranger);color:#EEEFD9;text-align:center;padding:64px 24px;border-top:1px solid var(--ranger-deep)}
+.fobp-site .band .eyebrow{color:var(--tan)}
+.fobp-site .band h2{color:#F3F3DF;font-family:'Bodoni Moda',serif;font-weight:500;text-transform:uppercase;letter-spacing:.05em;font-size:clamp(2em,4.4vw,3em);margin:14px 0 16px;line-height:1.06}
+.fobp-site .band p{max-width:600px;margin:0 auto 26px;color:#DBDDC2}
+
+/* ---------- committee table ---------- */
+.fobp-site .tablewrap{overflow-x:auto;border-radius:16px;border:1px solid var(--rule);background:var(--paper)}
+.fobp-site table.committee{width:100%;border-collapse:collapse;font-size:.96em}
+.fobp-site table.committee th, .fobp-site table.committee td{text-align:left;padding:13px 18px;border-bottom:1px solid var(--rule);vertical-align:top}
+.fobp-site table.committee th{background:var(--cream-3);font-family:'Lora',serif;color:var(--ranger-deep);width:40%;font-weight:700}
+.fobp-site table.committee tr:last-child td, .fobp-site table.committee tr:last-child th{border-bottom:none}
+
+/* ---------- document / link list ---------- */
+.fobp-site .doclist{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:880px;margin:0 auto}
+.fobp-site .doc{display:flex;align-items:center;gap:14px;background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:16px 20px;text-decoration:none;color:var(--ink);transition:transform .15s,box-shadow .15s}
+.fobp-site .doc:hover{transform:translateY(-3px);box-shadow:0 16px 30px -22px rgba(49,61,34,.7);color:var(--brick)}
+.fobp-site .doc .ic{flex:0 0 auto;width:34px;height:34px;border-radius:8px;background:var(--brick);display:flex;align-items:center;justify-content:center;color:#F4ECDD;font-size:.62em;font-weight:700;letter-spacing:.04em}
+.fobp-site .doc b{font-size:.95em;letter-spacing:.02em}
+
+/* ---------- gallery + lightbox ---------- */
+.fobp-site .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1080px;margin:0 auto}
+.fobp-site .frame{background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:8px 8px 0;cursor:zoom-in;transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column}
+.fobp-site .frame:hover{transform:translateY(-3px);box-shadow:0 18px 32px -22px rgba(49,61,34,.7)}
+.fobp-site .frame .shot{overflow:hidden;border-radius:9px 9px 0 0;background:var(--ranger-deep)}
+.fobp-site .frame img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.fobp-site .frame figcaption{font-size:.72em;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:var(--sage);text-align:center;padding:11px 6px 13px}
+.fobp-site .lb{position:fixed;inset:0;z-index:9999;display:none;background:rgba(28,32,18,.95);align-items:center;justify-content:center;padding:32px}
+.fobp-site .lb.open{display:flex}
+.fobp-site .lb img{max-width:92vw;max-height:82vh;border-radius:8px;border:2px solid var(--tan);box-shadow:0 30px 70px -20px rgba(0,0,0,.8)}
+.fobp-site .lb-cap{position:absolute;left:0;right:0;bottom:22px;text-align:center;color:var(--tan);font-size:.74em;letter-spacing:.24em;text-transform:uppercase;font-weight:700}
+.fobp-site .lb-count{position:absolute;top:26px;left:30px;color:var(--tan);font-size:.72em;letter-spacing:.24em;text-transform:uppercase;font-weight:700}
+.fobp-site .lb-btn{position:absolute;top:50%;transform:translateY(-50%);background:transparent;border:1.5px solid var(--tan);color:var(--tan);width:52px;height:52px;border-radius:50%;cursor:pointer;font-size:1.5em;display:flex;align-items:center;justify-content:center;transition:background .15s,color .15s}
+.fobp-site .lb-btn:hover{background:var(--tan);color:#1c2012}
+.fobp-site .lb-prev{left:24px}.fobp-site .lb-next{right:24px}
+.fobp-site .lb-close{top:22px;right:28px;transform:none;width:46px;height:46px;font-size:1.3em}
+
+/* ---------- footer ---------- */
+.fobp-site .footer{background:var(--ranger-deep);color:#CFD2B4;padding:54px 24px 30px}
+.fobp-site .footer a{color:var(--tan)}
+.fobp-site .footer-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+.fobp-site .footer h4{font-family:'Bodoni Moda',serif;color:#EFEFD7;text-transform:uppercase;letter-spacing:.06em;font-weight:500;font-size:1.05em;margin-bottom:14px}
+.fobp-site .footer p{font-size:.92em;margin-bottom:8px;color:#C5C8A9}
+.fobp-site .footer .flinks{list-style:none}
+.fobp-site .footer .flinks li{margin-bottom:8px}
+.fobp-site .footer .flinks a{text-decoration:none;font-size:.92em;color:#D7D9BC}
+.fobp-site .footer .flinks a:hover{color:#fff}
+.fobp-site .footer .social{display:flex;gap:14px;margin-top:6px}
+.fobp-site .footer .social a{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center}
+.fobp-site .footer .social svg{width:17px;height:17px;fill:var(--tan)}
+.fobp-site .footer-base{max-width:1080px;margin:30px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.13);font-size:.82em;color:#A9AC8C;text-align:center}
+
+/* ---------- legacy document pages (privacy policy etc.) ---------- */
+.fobp-site .legal{max-width:820px;margin:0 auto;padding:64px 24px}
+.fobp-site .legal h3,.fobp-site .legal h4{font-family:'Bodoni Moda',serif;color:var(--ranger-deep);margin:26px 0 10px}
+.fobp-site .legal p{margin:0 0 16px;color:var(--ink)}
+
+/* ---------- responsive ---------- */
+@media (max-width:920px){
+  .fobp-site .menu{gap:13px}
+  .fobp-site .menu a{font-size:.66em;letter-spacing:.1em}
+}
+@media (max-width:780px){
+  .fobp-site .cards, .fobp-site .cards.two{grid-template-columns:1fr}
+  .fobp-site .feature{grid-template-columns:1fr;gap:28px}
+  .fobp-site .feature.flip .ph{order:0}
+  .fobp-site .gallery{grid-template-columns:repeat(2,1fr);gap:14px}
+  .fobp-site .doclist{grid-template-columns:1fr}
+  .fobp-site .footer-grid{grid-template-columns:1fr;gap:24px}
+  .fobp-site .lb-prev{left:8px}.fobp-site .lb-next{right:8px}
+  .fobp-site .nav-inner{flex-wrap:wrap}
+  .fobp-site .menu{width:100%;justify-content:flex-start;gap:14px 16px}
+}
+@media (max-width:480px){
+  .fobp-site .gallery{grid-template-columns:1fr}
+}
